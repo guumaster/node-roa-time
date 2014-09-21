@@ -1,6 +1,7 @@
 var bump = require('gulp-bump');
 var git = require('gulp-git');
 var gulp = require('gulp');
+var npm = require('npm');
 
 
 gulp.task('bump', function () {
@@ -32,8 +33,10 @@ gulp.task('push', ['tag'], function () {
 });
 
 gulp.task('npm', ['push'], function (done) {
-    require('child_process').spawn('npm', ['publish'], { stdio: 'inherit' })
-        .on('close', done);
+    npm.commands.publish([], function(err, data){
+        if( err ) throw err;
+        done();
+    });
 });
 
 gulp.task('release', ['npm']);
