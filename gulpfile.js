@@ -33,10 +33,14 @@ gulp.task('push', ['tag'], function () {
 });
 
 gulp.task('npm', ['push'], function (done) {
-    npm.commands.publish([], function(err, data){
-        if( err ) throw err;
-        done();
+    npm.load({}, function(err){
+        if( err ) throw  err;
+        npm.commands.publish([], function(err, data){
+            if( err ) throw err;
+            done();
+        });
     });
+
 });
 
 gulp.task('release', ['npm']);
