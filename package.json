@@ -1,0 +1,32 @@
+{
+  "name": "node-roa-time",
+  "version": "0.0.1",
+  "scripts": {},
+  "description": "Spain official time provided by 'Real Instituto y Observatorio de la Armada' (ROA)",
+  "main": "lib/index.js",
+    "bin": {
+        "roa": "bin/roa.js"
+    },
+  "dependencies": {
+    "moment": "^2.8.3",
+    "ntp-client": "^0.5.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/guumaster/node-roa-time.git"
+  },
+  "keywords": [
+    "roa",
+    "spain",
+    "time",
+    "express",
+    "moment"
+  ],
+  "author": "guumaster",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guumaster/node-roa-time/issues"
+  },
+  "homepage": "https://github.com/guumaster/node-roa-time"
+}
