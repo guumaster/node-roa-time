@@ -1,6 +1,6 @@
 {
   "name": "node-roa-time",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "scripts": {},
   "description": "Spain official time provided by 'Real Instituto y Observatorio de la Armada' (ROA)",
   "main": "lib/index.js",
